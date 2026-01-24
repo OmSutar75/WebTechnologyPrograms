@@ -12,7 +12,9 @@
 
 //              NON Primitive DataType          
 
-// 1)Ojbect
+// // 1)Ojbect
+//    2)Array 
+//    3)Function
 
 
 let a = 12  // Number

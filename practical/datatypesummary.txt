@@ -1,0 +1,13 @@
+
+
+There are two types of memory stack and heap 
+
+stack used for primative 
+heap for non primative
+
+example 
+
+
+let mynewyoutubechan = 'ONS';
+
+let anotherchan = mynewyoutubechan;
