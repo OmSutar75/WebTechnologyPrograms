@@ -32,3 +32,7 @@ console.log(arr.includes(1)) // used to check element in array
 console.log(arr.indexOf(1));
 
 // split and slice  
+
+// The split() method is exclusively a string method. It divides a string into an ordered list of substrings based on a specified separator and returns the substrings as a new array. The original string is not modified.
+
+// Syntax: string.split(separator, limit)

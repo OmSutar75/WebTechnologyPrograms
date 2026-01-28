@@ -23,3 +23,6 @@ console.log(gamecount.charAt(2));
 console.log(gamecount.indexOf('a'));
 
 //activity 2 : get all information about functions of string in console of browser
+
+
+
