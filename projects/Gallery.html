@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #b99d9d;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background: #af4c60;
+            color: white;
+        }
+
+        button:hover {
+            background: #b83854;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img id="image" src="/images/first.jpg" alt="linux">
+
+        <div class="btn-group">
+            <button id="previousbtn" onclick="PreviousClick()">Previous</button>
+            <button id="nextbtn" onclick="NextClick()">Next</button>
+        </div>
+    </div>
+
+    <script src="gallery.js"></script>
+
+</body>
+</html>

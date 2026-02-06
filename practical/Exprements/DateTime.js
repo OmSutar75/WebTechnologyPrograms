@@ -20,4 +20,9 @@ let timestamp = Date.now();
 console.log(timestamp);
 console.log(timestamp/1000);
 
-// Activite 2 to get proper time what need to do  
+// Activite 2 to get proper time what need to do 
+
+// create object of Date class without any argument 
+
+let date = new Date();
+console.log(date);
