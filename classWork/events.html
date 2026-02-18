@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Amazing Images (Click to Remove)</h2>
+
+    <ul id="images">
+        <li>
+            <img id="photoshop"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                alt="Photoshop Logo">
+        </li>
+
+        <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                alt="Mount Fuji">
+        </li>
+
+        <li>
+            <img id="Nature"
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+                alt="Nature Image">
+        </li>
+
+        <li>
+            <img id="photoman"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Photographer">
+        </li>
+
+        <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                 //onclick="alert('hi i am tiger')"    
+                alt="Tiger">
+            </li>
+            <!-- the above event calling is not good way 
+            good way html should contains structure and js provide logic 
+            so above method hard to debug in big projects 
+
+            -->
+
+        <li>
+            <a href="https://google.com" id="google">Visit Google</a>
+        </li>
+    </ul>
+  </body>
+  <script>
+
+    // document.getElementById('tiger').onclick() = function (){
+    //     alert("i am tiger")
+    // };
+    // document.getElementById('nature').onclick() = function (){
+    //     alert("i am nature")
+
+    // };
+        // select element assign function to click event when clicked this function get executed 
+        // problem -- only one event can assign can't handle multiple Listener 
+
+    // document.getElementById('Nature').addEventListener('click',function (){
+    //         alert("i am nature");
+    //     });
+
+    document.getElementById('Nature').addEventListener("click",function(e){
+        console.log(e);
+    },false);
+    
+    // Event propagation 
+
+    // when third param is true then event goes to parent first and then child  parent ---> child
+    //  by default it is false child ---> parent 
+    document.getElementById("images").addEventListener("click",function(){
+        console.log('clicking inside the ul');
+    },true); 
+    document.getElementById("photoshop").addEventListener("click",function(){
+        console.log('clicking on photoshop');
+    });
+    document.getElementById("google").addEventListener("click",function(e){
+        console.log("google clicked ");
+        e.preventDefault();
+    })
+</script>
+</html>
+
+
+<!--  what is event 
+
+event is an action that happen in browser 
+e.g clicking a button ,moving mouse ,pressing key submiting form loading page
+
+
+js can detect these events and response to them 
+
+
+types of events 
+1)mouse event 
+i)click
+ ii) dblclick
+ iii)mouse hover
+ iv)mouse out
+ 
+ 2)keyboard event
+ i)key down
+ ii)key up
+ 
+ 3)browser event 
+ i)load
+ ii)resize
+ iii)scroll
+ 
+ 
+ //activity 
+     // jQuery,type,timestamp,defaultprevented target src element current target clientX clientY screenX screenY altKey ,cltKey shiftKey
+ 
+ // activity make after clicking on image then image will removed after refersh it should apper again
+    
+ // addEventlistener is js method used to attach to an html element  so that specific function run when particular event occur
+ 
+-->
