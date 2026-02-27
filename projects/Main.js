@@ -5,7 +5,6 @@ const statusText = document.getElementById("status");
 let playerLeft = 125;
 let gameOver = false;
 
-// Move player
 document.addEventListener("keydown", function (e) {
     if (gameOver) return;
 
@@ -19,7 +18,7 @@ document.addEventListener("keydown", function (e) {
     player.style.left = playerLeft + "px";
 });
 
-// Create obstacle
+
 function createObstacle() {
     if (gameOver) return;
 
@@ -50,7 +49,7 @@ function createObstacle() {
             obstacleTop < 390 &&
             parseInt(obstacle.style.left) === playerLeft
         ) {
-            statusText.innerText = "GAME OVER ❌";
+            statusText.innerText = "GAME OVER x ";
             gameOver = true;
             clearInterval(fall);
         }

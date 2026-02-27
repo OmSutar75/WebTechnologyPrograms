@@ -3,7 +3,7 @@
 
 let counter = 0;
 
-const list = ["/images/first.jpg","/images/second.jpg","/images/third.jpg","/images/forth.png"];
+const list = ["images/first.jpg","images/second.jpg","images/third.jpg","images/forth.png"];
 
 
 function PreviousClick()
